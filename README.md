@@ -14,7 +14,7 @@
 ### 一、总体方案
 
 <div align="center">
-  <img src="imgs/pipeline.png"/>
+  <img src="./pipeline.png"/>
 </div><br/>
 
 ​	针对三子棋游戏装置设计，我们提出了一个集成系统方案，该方案由以下关键模块构成：**视觉识别模块、机械臂运动控制模块**以及**按键系统控制**与**指示执行模块**。
@@ -60,13 +60,13 @@
 - 如下图为整个系统电路工作框图
 
 <div align="center">
-  <img src="imgs/circuitry1.png"/>
+  <img src="./imgs/circuitry1.png"/>
 </div><br/>
 
 - 根据如上图的系统工作流程和方式，对 esp32, OpenMV, st7796 显示屏,以及外接按键做如下电路连接，实现对应的设计功能
 
 <div align="center">
-  <img src="imgs/circuitry2.png"/>
+  <img src="./imgs/circuitry2.png"/>
 </div><br/>
 
 ​	我们通过一个二维云台作为机械臂第一级结构的支架部分，使其能够通过一个 360 度舵机实现旋转，覆盖棋盘的绝大部分面积。二级结构通过一个可旋转的直接连接第二个 360 度舵机，两级舵机结构可通过空间逆运算将抓取结构操作至指定的视觉识别像素点，最后通过一个 sg90 舵机实现棋子的投放与抓取。同时，OpenMV 由一个三脚架固定，使其摄像头置于系统装置中央，便于坐标编排。
